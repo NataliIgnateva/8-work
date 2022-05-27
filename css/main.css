@@ -1,0 +1,646 @@
+/*  Спецификация  */
+@font-face {
+	font-family: "Gill Sans MT";
+	src: url('../fonts/GIL.eot'); /* IE9 Compat Modes */
+	src: url('../fonts/GIL.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('../fonts/GIL.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/GIL.woff') format('woff'), /* Pretty Modern Browsers */
+		url('../fonts/GIL.ttf')  format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/GIL.svg#svgFontName') format('svg'); /* Legacy iOS */
+	font-weight: normal;
+}
+
+@font-face {
+	
+	font-family: "Gill Sans MT";
+	src: url('../fonts/GILB.eot'); /* IE9 Compat Modes */
+	src: url('../fonts/GILB.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		url('../fonts/GILB.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/GILB.woff') format('woff'), /* Pretty Modern Browsers */
+		url('../fonts/GILB.ttf')  format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/GILB.svg#svgFontName') format('svg'); /* Legacy iOS */
+	font-weight: bold;
+}
+
+body {
+	font-family: "Gill Sans MT";
+	font-size: 16px;
+	font-weight: normal;
+}
+
+button,
+button:hover,
+button:focus {
+	font-family: inherit;
+	outline: none;
+	border: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	color: #26272d;
+	line-height: 1.2em;
+	margin: 0;
+}
+
+p {
+	color: #8c8f94;
+	margin: 0;
+}
+
+ul, li {
+	display: block;
+	padding: 0;
+	margin: 0;
+}
+
+a {
+	color: #2500f9;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.btn {
+	border-radius: 25px;
+	font-weight: 400;
+	padding: 8px 0;
+	display: block;
+	width: 205px;
+	text-align: center;
+	transition: all 0.5s ease;
+}
+
+.btn:hover {
+	background: #309fe7;
+	color: #fff;
+	box-shadow: 0 8px 20px rgb(16 181 225 / 47%);
+}
+
+.btn:active {
+	background:#0074bf;
+	box-shadow: none
+}
+
+.section-title__heading {
+	font-size: 36px;
+	margin-bottom: 15px;
+}
+
+.offer__img, .day__img,.every__img {
+	transition: all 0.5s ease;
+}
+
+section:hover .day__img,
+header:hover .offer__img,
+section:hover .every__img {
+	transform: scale(1.02) ;
+	-webkit-transform: scale(1.02) ;
+	-moz-transform: scale(1.02) ;
+}
+
+
+.header {
+	background: #f4f4f5 url('../img/fon.jpg') no-repeat center bottom/cover;
+	padding-top: 44px;
+}
+
+.logo {
+	display: block;
+	background: url('../img/logo.png');
+	width: 133px;
+    height: 15px;
+    margin: auto;
+}
+
+.menu__link {
+	color: #26272d;
+	font-family: "Gill Sans MT";
+	font-weight: bold;
+	transition: all 0.5s ease;
+}
+
+.menu__link:hover {
+	color: #8c8f94;
+}
+
+.menu__item:not(:last-of-type) {
+	margin-right: 43px;
+}
+
+.btn-header{
+	width: 132px;
+	height: 42px;
+	color: #ffffff;
+	border-radius: 21px;
+	background-color: #267df4;
+	margin-left: 34px;
+}
+
+.btn-header::after {
+	content:'';
+	display: block;
+	background: url('../img/Apple_Icon.png') no-repeat center center;
+	width: 17px;
+	height: 20px;
+	padding-right: 30px;
+    padding-left: 35px;
+    margin-top: -23px;
+}
+
+.menu__wraper {
+	display: flex;
+	align-items: center;
+}
+
+.btn-header-text {
+	color: #ffffff;
+    margin-left: 30px;
+}
+
+.burger {
+  	height: 17px;
+  	background: none;
+  	border: 0;
+  	margin-right: 30px;
+   	cursor: pointer;
+}
+
+.burger__item {
+  	display: block;
+  	width: 22px;
+  	height: 2px;
+  	background-color: #1b1c1e;
+  	font-size: 0;
+  	color: transparent;
+  	position: relative;
+} 
+
+.burger__item:before,
+.burger__item:after {
+  	content: "";
+  	height: 100%;
+  	background-color:#1b1c1e;
+  	position: absolute;
+  	right: 0;
+  	z-index: 1;
+}
+
+.burger__item:before {
+  	width: 22px;
+  	top: -5px;
+}
+
+.burger__item:after {
+  	width: 22px;
+  	bottom: -5px;
+}
+
+.offer {
+	max-width: 780px;
+    text-align: center;
+    margin: 118px auto 0;
+}
+
+.offer__title {
+	font-size: 62px;
+}
+
+.offer__text {
+	font-size: 20px;
+	margin-top: 41px;
+}
+
+.offer__btn {
+	display: inline;
+    width: 205px;
+	height: 50px;
+    padding: 17px 40px;
+    border-radius: 25px;
+	border: 1px solid #26272d;
+	color: #26272d;
+	font-size: 16px;
+	font-weight: 700;
+	font-family: Lato;
+}
+
+.offer__btn_primary {
+	margin: 66px auto 0;
+	transition: all 0.5s ease;
+}
+
+.offer__btn_primary::before {
+	content:'';
+	display: block;
+	background: url('../img/Play_Icon.png') no-repeat;
+	width: 10px;
+	height: 10px;
+	margin-right: 12px;
+	transition: all 0.5s ease;
+}
+
+.offer__btn_primary:hover {
+	padding: 17px 38px;
+	color: #26272d;
+}
+
+.offer__btn_primary:hover::before {
+	margin-right: 20px;
+}
+
+.offer__img img {
+	max-width: 100%;
+}
+
+.offer__img {
+	height: 455px;
+	text-align: center;
+	object-fit: cover;
+	margin-top: 50px;
+	position: relative;
+   	overflow:hidden;
+}
+
+.time {
+	padding-top: 122px;
+	padding-bottom: 50px;
+}
+
+.time__title {
+	margin-top: 45px;
+	margin-bottom: 48px;
+	font-size: 26px;
+}
+
+.time__text:not(:last-child) {
+    margin-bottom: 39px;
+}
+
+.time__text {
+	max-width: 505px;
+	font-size: 18px;
+	margin-bottom: 0px;
+}
+
+.day {
+	padding-top: 50px;
+    padding-bottom: 85px;
+}
+
+.day__img {
+	max-width: 774px;
+	width: auto;
+	height: 680px;
+	margin-left: -138px;
+	background: url('../img/iPhone6.png') no-repeat center center / contain;
+}
+
+.day__title {
+	font-size: 42px;
+	margin-top: 20px;
+	margin-bottom: 76px;
+}
+
+.day__title_br {
+	display: block;
+}
+
+.day__text {
+	font-size: 20px;
+	max-width: 471px;
+    margin-bottom: 0px;
+}
+
+.day__text:not(:last-child) {
+    margin-bottom: 41px;
+}
+
+.day__btns {
+	margin-top: 75px;
+	margin-bottom: 85px;
+}
+
+.day__btn {
+	display: inline;
+    padding: 15px 26px;
+    font-size: 15px;
+	font-weight: 600;
+}
+
+.day__btn_primary {
+	width: 202px;
+	height: 42px;
+	margin-right: 20px;
+	background-color: #267df4;
+	color: #ffffff;
+	transition: all 0.5s ease;
+}
+
+.day__btn_primary::after {
+	content:'';
+	display: block;
+	background: url('../img/Arrow_Icon.png');
+	width: 13px;
+	height: 12px;
+	margin-left: 33px;
+	transition: all 0.5s ease;
+}
+
+.day__btn_primary:hover {
+	padding: 15px 23px;
+}
+
+.day__btn_primary:hover::after {
+	margin-left: 36px;
+}
+
+.day__btn_secondary {
+	width: 142px;
+	height: 42px;
+	border-radius: 21px;
+	border: 1px solid #26272d;
+	color: #26272d;
+}
+
+.every__title {
+	font-size: 42px;
+	font-weight: 700;
+	margin-bottom: 67px;
+}
+
+.every__text {
+	margin-bottom: 0px;
+	font-size: 20px;
+	max-width: 442px;
+}
+
+.every__text:not(:last-child) {
+    margin-bottom: 34px;
+}
+
+.every__title_partners {
+	font-size: 12px;
+	text-transform: uppercase;
+	margin-top: 69px;
+	margin-bottom: 31px;
+}
+
+.every__item:not(:last-child) {
+    margin-right: 34px;
+}
+
+.every {
+	padding-top: 86px;
+	padding-bottom: 112px;
+}
+
+.every__img {
+    margin-left: 68px;
+    max-width: 627px;
+    width: 101%;
+    height: 401px;
+    background: url('../img/World_Map.png') no-repeat center center / contain;
+}
+
+.every__client,
+.footer__appstore {
+	transition: all 0.5s ease;
+}
+
+.every__client:hover,
+.footer__appstore:hover {
+	opacity: 0.8
+}
+
+.footer__text {
+	font-family: "Gill Sans MT";
+	font-size: 14px;
+	margin-top: 31px;
+	margin-bottom: 28px;
+}
+
+.footer__logo {
+	margin-left: 0px;
+}
+
+.footer {
+	padding-bottom: 209px;
+	padding-top: 112px;
+	font-family: "Gill Sans MT";
+}
+
+.footer__title {
+	font-size: 12px;
+	font-weight: 700;
+	text-transform: uppercase;
+	margin-bottom: 25px;
+}
+
+.footer__link {
+	color: #8c8f94;
+	font-size: 16px;
+	font-weight: 400;
+	text-align: left;
+}
+
+.footer__link:hover {
+	color: #55595e;
+}
+
+.footer__item:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+
+
+
+
+
+
+/*  Responsive  */
+
+@media (max-width: 1200px) {
+	.day__img {
+		margin-left: 0px;
+		width: 100%;
+	}
+	.every__img {
+		margin-left: 0px;
+	   	width: 100%;
+	}
+	.footer__list {
+   		 margin-left: -7px;
+	}
+	.footer__title {
+		margin-left: -7px;
+	}
+}
+
+
+@media (max-width: 992px) {
+	.menu__item:not(:last-of-type) {
+   		 margin-right: 11px;
+	}
+	.logo {
+	    margin: 18px auto;
+	}
+	.time__lock {
+		margin-bottom: 43px;
+	}
+	.every {
+    	padding-top: 70px;
+   		padding-bottom: 48px;
+    }
+    .every__img {
+   	    margin: 50px auto 0;
+	}
+	.footer__title {
+        margin: 21px auto;
+    }
+    .footer {
+    	padding-bottom: 131px;
+    	padding-top: 59px;
+	}
+	.footer__wrapper_more {
+		text-align: center;
+	}
+	.footer__wrapper_about {
+		text-align: center;
+	}
+	.footer__wrapper_support {
+		text-align: center;
+	}
+	.footer_wrapper_logo {
+		text-align: center;
+		padding-bottom: 30px;
+	}
+	.menu__link {
+		display: none;
+	}
+	.offer {
+        padding-top: 65px;
+    }    
+}
+
+
+
+@media (max-width: 768px) {
+	.btn-header {
+		display: none;
+	}
+	.logo {
+    	margin: 0 auto;
+	}
+	.day__img {
+		height: 466px;
+	}
+	.time {
+       padding-bottom: 57px;
+	}
+	.every {
+    	padding-top: 37px;
+    	padding-bottom: 3px;
+    }
+    .footer__wrapper_about {
+    	padding-bottom: 30px;
+    }
+    .footer__wrapper_more {
+    	padding-bottom: 30px;
+    }	
+    .footer_wrapper_logo {
+    	padding-top: 20px;
+    }
+}
+  
+
+
+
+@media (max-width: 576px) {
+	.offer__title {
+    	font-size: 48px;
+	}
+	.offer__btn_primary {
+    	width: 100%;
+    }
+    .day__img {
+    	height: 264px;
+	}
+	.day__btn_primary {
+    	margin-bottom: 30px;
+	}
+	 .day__btn_primary {
+    	width: 100%;
+	}
+	.day__btn_secondary {
+    	width: 100%;
+    }
+    .every__img {
+    	margin: 65px auto 0;
+    	height: 307px;
+	}
+	.time {
+    	padding-top: 68px;
+	}
+	.every__list {
+    	flex-direction: column;
+	}
+	.every__item:not(:last-of-type) {
+    	margin-bottom: 30px;
+        margin-right: 21px;
+	}
+	.every__title_partners {
+    	text-align: center;
+    }
+     .time__img {
+    	text-align: center;
+	}
+	.time__title {
+		text-align: center;
+	}
+	.day__title {
+		text-align: center;
+	}
+	.every__title {
+		text-align: center;
+	}
+}
+	
+
+@media (max-width: 400px) {
+	.logo {
+		display: none;
+	}
+	.footer__logo {
+		display: block;
+	}
+	.offer {
+    	padding-top: 0px;
+	}
+	.footer {
+		padding-top: 14px;
+	}
+	.every__img {
+		margin: 18px auto 0;
+	}
+	.offer__img {
+    	height: 324px;
+	}
+}
+
+@media (max-width: 280px) {
+	.offer__img {
+    	height: 275px;
+	}
+	.offer__title {
+    	font-size: 44px;
+	}
+	.day__title {
+    	font-size: 38px;
+    }
+    .every__title {
+    	font-size: 38px;
+    }	
+}
+
+
